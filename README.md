@@ -4,8 +4,8 @@
 도서관 코드를 통해 도서관의 도서 소장 여부를 확인하기 전, 도서관 코드와 도서관 이름을 크롤링  
 
 <h3>활용한 API</h3>
-정보 도서나루 공개 API의 **정보공개 도서관API**  
-활용 API 예시 : http://data4library.kr/api/libSrch?authKey=[발급받은키]&pageNo=1&pageSize=10  
+정보 도서나루 공개 API의 **정보공개 도서관API**<br>  
+활용 API 예시 : http://data4library.kr/api/libSrch?authKey=[발급받은키]&pageNo=1&pageSize=10<br>  
 
 <h3>코드 구성</h3>
 (interface) DataCrawler : getCrawledData,() extractData(). 
