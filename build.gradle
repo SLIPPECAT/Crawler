@@ -15,10 +15,12 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation group: 'org.jsoup', name: 'jsoup', version: '1.16.1'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
+    // crawling 작업
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.16.1'
+    // csv 작업
     implementation group: 'com.opencsv', name: 'opencsv', version: '5.7.1'
 
 }

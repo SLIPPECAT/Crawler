@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.parser.Parser;
@@ -13,8 +14,12 @@ import org.jsoup.select.Elements;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
+import org.springframework.stereotype.Component;
+
 
 @RequiredArgsConstructor
+@Component
+@Slf4j
 public class CSVMaker2 {
 
 	private final DataCrawler crawler;

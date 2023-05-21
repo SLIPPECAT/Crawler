@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.parser.Parser;
@@ -17,8 +18,7 @@ import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 @Component
-@Getter
-@Setter
+@Slf4j
 public class CSVMaker {
 
 	private final DataCrawler crawler;
@@ -61,11 +61,10 @@ public class CSVMaker {
 						String libName = entry.getValue();
 						writer.writeNext(new String[]{libCode, libName});
 					}
-					System.out.println("CSV 파일이 성공적으로 생성되었습니다.");
+					log.info(csvFilePath);
 				} catch (IOException e) {
-					System.out.println("CSV 파일 생성 중 오류가 발생했습니다: " + e.getMessage());
+					log.info("CSV 파일 생성 중 오류가 발생했습니다: " + e.getMessage());
 				}
-
 				pageNo++;
 				doc = crawler.getCrawledData(pageNo);
 			}
