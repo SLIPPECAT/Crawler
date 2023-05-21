@@ -31,8 +31,9 @@ public class CSVMaker2 {
 			List<Map<String, String>> data = new ArrayList<>();
 
 			Document doc = crawler.getCrawledData(pageNo);
+			String text = doc.text();
 
-			while(doc != null) {
+			while(doc != null && !text.isEmpty()) {
 				String xmlData = String.valueOf(doc);
 
 				Document document = Jsoup.parse(xmlData, "", Parser.xmlParser());
