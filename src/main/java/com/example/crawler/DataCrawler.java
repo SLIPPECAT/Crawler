@@ -9,5 +9,5 @@ import org.jsoup.select.Elements;
 public interface DataCrawler {
 
 	Document getCrawledData(int PageNo);
-	Map<String, String> extractData(Elements libNames, Elements libCodes);
+	Map<String, String> extractData(Elements libCodes, Elements libNames);
 }
