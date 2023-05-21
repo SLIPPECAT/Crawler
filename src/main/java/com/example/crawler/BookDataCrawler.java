@@ -26,8 +26,6 @@ public class BookDataCrawler implements DataCrawler{
 
 	private int pageNo;
 
-	String api = "https://data4library.kr/api/libSrch?authKey=55db267f8f05b0bf8e23e8d3f65bb67d206a6b5ce24f5e0ee4625bcf36e4e2bb";
-
 	public BookDataCrawler() {
 		this.pageNo = 1;
 	}
@@ -44,7 +42,6 @@ public class BookDataCrawler implements DataCrawler{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		this.pageNo++;
 		return doc;
 	}
 

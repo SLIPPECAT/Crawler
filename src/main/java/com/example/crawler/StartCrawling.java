@@ -17,7 +17,9 @@ public class StartCrawling {
 
 		SSLUtil.trustAllCertificates();
 		// CSVMaker 빈 가져오기
-		CSVMaker csvMaker = context.getBean(CSVMaker.class);
+//		CSVMaker csvMaker = context.getBean(CSVMaker.class);
+//		csvMaker.generateCSV();
+		CSVMaker2 csvMaker = context.getBean(CSVMaker2.class);
 		csvMaker.generateCSV();
 
 		// Spring 컨테이너 종료

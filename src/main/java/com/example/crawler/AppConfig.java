@@ -15,6 +15,11 @@ public class AppConfig {
 	}
 
 	@Bean
+	public CSVMaker2 csvMaker2(BookDataCrawler crawler) {
+		return new CSVMaker2(crawler);
+	}
+
+	@Bean
 	public BookDataCrawler bookDataCrawler(){
 		return new BookDataCrawler();
 	}

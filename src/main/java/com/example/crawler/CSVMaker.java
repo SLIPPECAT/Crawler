@@ -24,6 +24,7 @@ public class CSVMaker {
 	private final DataCrawler crawler;
 
 	public void generateCSV() {
+		log.info("크롤링 작업을 시작합니다.");
 		try {
 			int pageNo = 1;
 			Document doc = crawler.getCrawledData(pageNo);
