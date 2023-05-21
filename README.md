@@ -7,7 +7,7 @@
 정보 도서나루 공개 API의 **정보공개 도서관API**<br>  
 활용 API 예시 : http://data4library.kr/api/libSrch?authKey=[발급받은키]&pageNo=1&pageSize=10<br>  
 
-<h3>코드 구성</h3>
+<h3>클래스 구성</h3>
 (class) AppConfig : CSVMaker, BookDataCralwer를 빈 등록, Value값을 불러옴  <br>
 (interface) DataCrawler : getCrawledData,() extractData(). <br>  
 (class) BookDataCrawler : DataCrawler를 구현한 클래스. <br>  
