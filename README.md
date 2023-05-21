@@ -8,7 +8,7 @@
 활용 API 예시 : http://data4library.kr/api/libSrch?authKey=[발급받은키]&pageNo=1&pageSize=10<br>  
 
 <h3>코드 구성</h3>
-(interface) DataCrawler : getCrawledData,() extractData(). 
-(class) BookDataCrawler : DataCrawler를 구현한 클래스. 
-(class) SSLUtil : 공개 도서나루 Api에 요청을 보낼 때, 인증서 신뢰를 시키게 하기 위한 클래스 (보완 필요)  
-(class) CSVMaker : BookDataCrawler의 extractData를 활용하여 크롤링 한 이후, CSV 파일 생성  
+(interface) DataCrawler : getCrawledData,() extractData(). <br>  
+(class) BookDataCrawler : DataCrawler를 구현한 클래스. <br>  
+(class) SSLUtil : 공개 도서나루 Api에 요청을 보낼 때, 인증서 신뢰를 시키게 하기 위한 클래스 (보완 필요)  <br>  
+(class) CSVMaker : BookDataCrawler의 extractData를 활용하여 크롤링 한 이후, CSV 파일 생성  <br>  
